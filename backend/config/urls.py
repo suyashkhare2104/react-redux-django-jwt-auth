@@ -43,5 +43,6 @@ urlpatterns = [
         'rest_framework.urls', namespace='rest_framework')),
     path('api/auth/token/obtain/', TokenObtainPairView.as_view()),
     path('api/auth/token/refresh/', TokenRefreshView.as_view()),
+    path('items/', include('items.urls')),
     path('api/echo/', EchoView.as_view())
 ]

@@ -5,8 +5,7 @@ import createHistory from 'history/createBrowserHistory'
 import { ConnectedRouter } from 'react-router-redux'
 import { Provider } from 'react-redux'
 import {Route, Switch} from 'react-router'
-
-import './index.css';
+import {POS} from './scenes/POS';
 import 'bootstrap/dist/css/bootstrap.css';
 import App from './App';
 import Login from './containers/Login';
@@ -22,6 +21,7 @@ ReactDOM.render((
     <ConnectedRouter history={history}>
       <Switch>
         <Route exact path="/login/" component={Login} />
+        <Route exact path="/pos/" component={POS} />
         <PrivateRoute path="/" component={App}/>
       </Switch>
     </ConnectedRouter>
